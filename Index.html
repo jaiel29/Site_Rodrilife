@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rodrilife</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            margin: 0; /* Adicionado para remover margens padrão */
+            padding: 0; /* Adicionado para remover preenchimentos padrão */
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            display: flex;
+            align-items: center; /* Centralizar itens verticalmente */
+        }
+        .logo {
+            margin-right: 20px; /* Espaço à direita da logo */
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end; /* Alinhamento dos botões à direita */
+            flex-grow: 1; /* Os botões ocupam todo o espaço restante */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 10px;
+            position: relative; /* Adicionado para ajustar sub-botões */
+        }
+        nav ul li a {
+            display: block;
+            width: auto;
+            height: 30px;
+            line-height: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            background: #FFA500;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 3px solid #FFA500;
+            transition: all .35s;
+            position: relative;
+            z-index: 1;
+            padding: 0 15px;
+        }
+        .icon {
+            width: 30px;
+            height: 30px;
+            border: 3px solid transparent;
+            position: absolute;
+            transform: rotate(45deg);
+            right: -3px;
+            top: 0;
+            z-index: -1;
+            transition: all .35s;
+        }
+        .icon svg {
+            width: 20px;
+            position: absolute;
+            top: calc(50% - 10px);
+            left: calc(50% - 10px);
+            transform: rotate(-45deg);
+            fill: #FF6347;
+            transition: all .35s;
+        }
+        nav ul li a:hover {
+            border: 3px solid #FF6347;
+            background: transparent;
+            color: #FF6347;
+        }
+        nav ul li a:hover + .icon {
+            border: 3px solid #FF6347;
+            right: -28%;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Melhorar sombra */
+            z-index: 2;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        section {
+            margin: 15px 0;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        form input[type="submit"] {
+            width: 100px;
+        }
+        #inicio {
+            text-align: center;
+        }
+        #inicio h1 {
+            color: #800000;
+        }
+
+        /* Modificações para o novo botão "Solicitar um orçamento" */
+        .btn-orcamento {
+            display: block;
+            width: auto;
+            height: 30px;
+            line-height: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            background: #FFA500;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 3px solid #FFA500;
+            transition: all .35s;
+            position: relative;
+            z-index: 1;
+            padding: 0 15px;
+            margin-right: 10px;
+        }
+        .btn-orcamento:hover {
+            border: 3px solid #FF6347;
+            background: transparent;
+            color: #FF6347;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Coloque aqui a tag da sua logo -->
+            <img src="caminho_para_sua_logo.png" alt="Logo da Rodrilife">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <div class="link_wrapper">
+                        <a href="#inicio">Início</a>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                                <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link_wrapper">
+                        <a href="https://www.google.com/maps/place/Endereço+da+sua+empresa">Endereço</a>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                                <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link_wrapper">
+                        <a href="#">Fale conosco</a>
+                        <ul>
+                            <li><a href="mailto:email@empresa.com">E-mail</a></li>
+                            <li><a href="https://wa.me/seunumerodewhatsapp">WhatsApp</a></li>
+                        </ul>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                                <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="btn-orcamento" href="#orcamento">Solicitar um orçamento</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio">
+        <h1>Rodrilife</h1>
+        <p>Aqui você pode adicionar informações sobre a empresa, cultura e áreas de atuação.</p>
+    </section>
+</body>
+</html>
